@@ -1,25 +1,27 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-
-function ColorSchemesExample() {
+import { Link } from 'react-router-dom';
+import Logo from '../assets/images/Main_logo.svg';
+function NavBar() {
     return (
         <>
-            <Navbar bg="light" data-bs-theme="light">
+            <Navbar bg="white">
                 <Container>
-                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/"> <img src={Logo} alt="logo" width="100px"  /> </Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#features">National Team</Nav.Link>
-                        <Nav.Link href="#pricing">Schools League</Nav.Link>
-                        <Nav.Link href="#pricing">Calendar</Nav.Link>
-                        <Nav.Link href="#pricing">Announcements</Nav.Link>
-                        <Nav.Link href="#pricing">Information</Nav.Link>
+                        <Nav.Link as={Link} to="/">Home</Nav.Link>
+                        <Nav.Link as={Link} to="/national-team">National Team</Nav.Link>
+                        <Nav.Link as={Link} to="/schools-league">Schools League</Nav.Link>
+                        <Nav.Link as={Link} to="/calendar">Calendar</Nav.Link>
+                        <Nav.Link as={Link} to="/announcements">Announcements</Nav.Link>
+                        <Nav.Link as={Link} to="/information">Information</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>
         </>
     );
+
 }
 
-export default ColorSchemesExample;
+export default NavBar;
