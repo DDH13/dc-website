@@ -6,7 +6,7 @@ import Logo from '../assets/images/Main_logo.svg';
 function NavBar() {
     return (
         <>
-            <Navbar bg="white">
+            <Navbar bg="white" fixed="top">
                 <Container>
                     <Navbar.Brand as={Link} to="/"> <img src={Logo} alt="logo" width="100px"  /> </Navbar.Brand>
                     <Nav className="me-auto">
